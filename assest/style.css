@@ -1,35 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap');
 
 :root{
-  --text-color: #09683d;
-  --card-front-color: #51BBA9;
-  --card-back-color: #15AE68;
+  --text-color: #ffffff;
+  --card-front-color: #144480;
+  --card-back-color: #51BBA9;
 }
 
 body {
-  background: url(img/bg-desktop-green.webp);
-  font-family: Grandstander;
+  background: url(img/bg-desktop-blue.webp);
+  font-family: Tomorrow;
+}
+.cabecalho{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: var(--card-back-color);
 }
 .cartao__conteudo {
   background-color: var(--card-front-color);
   text-align: center;
-  height: 100%; color: var(--text-color);
-  border: 1px solid var(--text-color);
-  text-align: left;
-  padding: 0.5rem;
-  position: absolute;
-  margin: 0.6rem;
-  border-radius: 0.6rem;
-  font-size: 1vw;
+  height: 100%;
   transform-style: preserve-3d;
-  transition: tranform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
 }
 #container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-cartao {
+.cartao {
   margin: 1rem 1rem;
   height: 20rem;
   flex-grow: 1;
@@ -47,21 +46,24 @@ cartao {
   margin: 0.6rem;
   border-radius: 0.6rem;
   font-size: 1vw;
+  backface-visibility: hidden;
 }
 .cartao__conteudo__pergunta p {
   color: var(--text-color);
   font-weight: 500;
 }
-
-cartao__conteudo__resposta p {
+.cartao__conteudo__resposta p {
   color: var(--card-back-color);
   font-weight: 700;
 }
 .cartao__conteudo__pergunta .cartao__conteudo__resposta{
-    position: absolute;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    backface-visibility: hidden;
+  position: absolute;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+}
+.cartao:hover .cartao__conteudo{
+  transform: rotateY(180deg);
 }
 footer {
   background-color: black;
@@ -76,4 +78,12 @@ footer p {
   font-size: 0.6rem;
   margin-top: 0.5rem;
 }
+/* Muda a cor do título principal (Confira...) */
+header h1 {
+    color:white;/*Substitua pelo nome da cor ou código hexadecimal */
+}
 
+/* Muda a cor do subtítulo (Descubra a verdade...) */
+main h2 {
+    color:rgb(179, 240, 255);/*Substitua pelo nome da cor ou código hexadecimal */
+}
